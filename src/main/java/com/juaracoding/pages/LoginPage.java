@@ -27,10 +27,6 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='app_logo']")
     WebElement textSwagLabs;
 
-    @FindBy(xpath = "//button[@id='react-burger-menu-btn']")
-    WebElement btnSidebar;
-    @FindBy(xpath = "//a[@id='logout_sidebar_link']")
-    WebElement btnLogout;
 
 
     // Step Action
@@ -41,10 +37,7 @@ public class LoginPage {
     }
 
     // buatkan method logout
-    public void logout(){
-        btnSidebar.click();
-        btnLogout.click();
-    }
+
 
     public void setUsernameInput(String username){
         this.usernameInput.sendKeys(username);

@@ -16,7 +16,6 @@ import org.testng.Assert;
 public class LoginSauceTest {
     private static WebDriver driver;
     private static LoginPage loginPage = new LoginPage();
-    private static UserHomePage userHomePage = new UserHomePage();
     private static ExtentTest extentTest;
     public LoginSauceTest(){
         driver = Hooks.driver;
@@ -48,7 +47,7 @@ public class LoginSauceTest {
     }
     @Then("User login successful")
     public void user_login_successful(){
-        Assert.assertEquals(loginPage.getTextSwagLabs(), "SwagLabs");
+        Assert.assertEquals(loginPage.getTextSwagLabs(), "Swag Labs");
         extentTest.log(LogStatus.PASS, "User login successful");
     }
 
